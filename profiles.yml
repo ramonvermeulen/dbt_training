@@ -1,0 +1,12 @@
+dbt_training:
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      threads: 32
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      project: <REPLACE_ME> # GCP project id
+      schema: <REPLACE_ME> # target schema (use dbt_training_$YOUR_NAME)
+      keyfile: <REPLACE_ME> # path to the keyfile
+  target: dev
