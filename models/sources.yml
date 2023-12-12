@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: ipa
+    schema: dare_dev_10
+    tables:
+      - name: issuer_risk
+      - name: fxspot
