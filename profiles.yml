@@ -3,6 +3,7 @@ dbt_training:
     dev:
       type: bigquery
       method: service-account
+      location: europe-west4
       threads: 32
       job_execution_timeout_seconds: 300
       job_retries: 1
