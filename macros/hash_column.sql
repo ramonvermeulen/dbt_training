@@ -1,8 +1,8 @@
-{% macro hash_columns(columns=[]) %}
+{%- macro hash_columns(columns=[]) -%}
     SHA256(CONCAT(
-        {% for column in columns %}
+        {%- for column in columns -%}
         {{ column }}
-        {% if not loop.last %},{% endif %}
-        {% endfor %}
+        {%- if not loop.last %},{% endif -%}
+        {%- endfor -%}
     ))
-{% endmacro %}
+{%- endmacro -%}
